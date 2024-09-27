@@ -239,7 +239,3 @@ Assuming 4 players, we allocate loot starting from the highest priority:
 - **Integer Constraints**: The problem is an instance of the **0/1 Knapsack Problem** with additional integer constraints due to the clicks mechanism.
 - **Greedy Algorithm Suboptimality**: While the greedy algorithm provides a practical solution, it may not always yield the absolute optimal result for the integer knapsack problem.
 - **Game Mechanics**: The algorithm assumes that players can access all loot stacks, which may not always be feasible due to in-game restrictions.
-
-## Conclusion
-
-By combining the greedy algorithm with the knapsack problem framework, we achieve an effective method for optimizing loot distribution in the Cayo Perico Heist. This approach maximizes the total value collected by prioritizing loot types based on their value density and adhering to the game's mechanics of loot collection via clicks.
