@@ -70,27 +70,26 @@ $$r_{S_j} = C_L$$
 
 ### 5. Distribute Loot Among Players
 
-For each loot type$L$in the priority list:
+For each loot type $L$ in the priority list:
 
-1. For each stack$S_j$of loot type$L$:
+1. For each stack $S_j$ of loot type $L$:
 
    a. While $r_{S_j} > 0$ :
-
-      i. For each player $P_i$ with $R_i > 0$ :
+      i. For each player $P_i$ with $R_i > 0$ :  
          - **Bag Space per Click**:
-          $$b_L = \frac{B_L}{C_L}$$
+          $$b_L = \frac{B_L}{C_L}$$  
          - **Maximum Clicks Player Can Take**:
-          $$k = \left\lfloor \frac{R_i}{b_L} \right\rfloor$$
+          $$k = \left\lfloor \frac{R_i}{b_L} \right\rfloor$$  
          - **Clicks to Take**:
-          $$c = \min(k, r_{S_j})$$
+          $$c = \min(k, r_{S_j})$$  
          - If $c \leq 0$ , skip to the next player.
          - **Update Player's Bag Capacity**:
-          $$R_i = R_i - c \times b_L$$
+          $$R_i = R_i - c \times b_L$$  
          - **Record Loot Taken**:
-           - Add$c$clicks from stack$S_j$to player$P_i$'s loot.
+           - Add $c$ clicks from stack $S_j$ to player $P_i$'s loot.
          - **Update Stack's Remaining Clicks**:
-          $$r_{S_j} = r_{S_j} - c$$
-         - Break if$R_i = 0$or$r_{S_j} = 0$.
+          $$r_{S_j} = r_{S_j} - c$$  
+         - Break if $R_i = 0$ or $r_{S_j} = 0$.
 
       ii. If no player can take more from $S_j$ , move to the next stack.
 
